@@ -1,5 +1,7 @@
 GoldenwolfApi::Application.routes.draw do
   resources :todos
+  match '/todos', :controller => 'todos', :action => 'options', :constraints => {:method => 'OPTIONS'}
+  
 
 
   # The priority is based upon order of creation:
