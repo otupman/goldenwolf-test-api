@@ -20,15 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-# Note: typically we'd recommend the same DB on dev, test & prod
-group :development, :test do
-  gem 'sqlite3'
-end
 
-# However, for the purposes of this test we'll stick with this
-group :production do
-  gem 'pg'
-end
+gem 'pg'
 
 gem 'jquery-rails'
 
