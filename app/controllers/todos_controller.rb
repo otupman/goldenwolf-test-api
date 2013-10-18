@@ -39,8 +39,9 @@ class TodosController < ApplicationController
 
   # POST /todos
   # POST /todos.json
-  def create
-    @todo = Todo.new(params[:todo])
+  def create  
+    todo = { text: params[:text]}
+    @todo = Todo.new(todo)
 
     respond_to do |format|
       if @todo.save
